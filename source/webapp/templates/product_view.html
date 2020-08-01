@@ -3,14 +3,14 @@
 {% block title %}Детали товара{% endblock %}
 
 {% block menu %}
-    <li><a href="{% url 'product_update' article.pk %}">Редактировать</a></li>
-    <li><a href="{% url 'product_delete' article.pk %}">Удалить</a></li>
+    <li><a href="{% url 'product_update' product.pk %}">Редактировать</a></li>
+    <li><a href="{% url 'product_delete' product.pk %}">Удалить</a></li>
 {% endblock %}
 
 {% block content %}
     <h1>Название: {{ product.name }}</h1>
     <p>Описание: {{ product.description }}</p>
     <p>Категория: {{ product.category }}</p>
-    <p>Остаток товара: {{ product.amount }}</p>
+    <p>Остаток товара: {{ product.amount }} шт.</p>
     <p>Цена за единицу товара: {{ product.price }}</p>
 {% endblock %}

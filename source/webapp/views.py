@@ -7,7 +7,7 @@ from webapp.forms import ProductForm
 def index_view(request):
     is_admin = request.GET.get('is_admin', None)
     data = Product.objects.all()
-    return render(request, 'index.html', context={'notes': data})
+    return render(request, 'index.html', context={'products': data})
 
 
 def product_view(request, pk):

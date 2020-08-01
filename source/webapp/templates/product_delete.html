@@ -7,11 +7,12 @@
 
 {% block content %}
     <h1>Вы уверены, что хотите удалить данный товар из списка?</h1>
-    <p>{{ product.title }}</p>
+    <p>{{ product.name }}</p>
     <p>{{ product.description }}</p>
     <p>Остаток: {{ product.amount}}</p>
     <form action="{% url "product_delete" product.pk  %}" method="post">
-        <p><input type="submit"></p>
+    {% csrf_token %}
+        <p><input type="submit" value="Удалить"></p>
     </form>
-
+        <a href="{% url 'index' %}"><input type="submit" value="Отмена"></a>
 {% endblock %}
