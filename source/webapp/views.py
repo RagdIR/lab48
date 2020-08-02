@@ -6,8 +6,14 @@ from webapp.forms import ProductForm
 
 def index_view(request):
     is_admin = request.GET.get('is_admin', None)
+    # if is_admin:
     data = Product.objects.all()
-    return render(request, 'index.html', context={'products': data})
+    # return render(request, 'index.html', context={'products': data})
+    # else:
+    #     data = Product.objects.filter('amount').values('min_value > 0')
+    return render(request, 'index.html', context={
+            'products': data
+    })
 
 
 def product_view(request, pk):
