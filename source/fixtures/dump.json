@@ -55,11 +55,55 @@
   }
 },
 {
+  "model": "webapp.product",
+  "pk": 6,
+  "fields": {
+    "name": "\u0428\u0432\u0430\u0431\u0440\u0430",
+    "description": "\u0412\u043e\u043b\u0448\u0435\u0431\u043d\u043e\u0435 \u0438\u0437\u043e\u0431\u0440\u0435\u0442\u0435\u043d\u0438\u0435 \u0438\u0437 \u0434\u0432\u0443\u0445 \u043f\u0430\u043b\u043e\u043a, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u043f\u043e\u0437\u0432\u043e\u043b\u0438\u0442 \u0432\u0430\u043c \u0432\u0441\u0442\u0430\u0442\u044c \u0441 \u043a\u043e\u043b\u0435\u043d",
+    "category": "household",
+    "amount": 5,
+    "price": "200.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 7,
+  "fields": {
+    "name": "\u0422\u0435\u0442\u0440\u0430\u0434\u044c",
+    "description": "\u041f\u0440\u043e\u0441\u0442\u043e \u043b\u0438\u0441\u0442\u044b \u0431\u0443\u043c\u0430\u0433\u0438, \u0441\u043a\u0440\u0435\u043f\u043b\u0435\u043d\u043d\u044b\u0435 \u0432\u043e\u0435\u0434\u0438\u043d\u043e",
+    "category": "other",
+    "amount": 45,
+    "price": "20.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 10,
+  "fields": {
+    "name": "\u041c\u043e\u043d\u0438\u0442\u043e\u0440",
+    "description": "\u041c\u043e\u043d\u0438\u0442\u043e\u0440 23\", \u043d\u043e\u0443\u043d\u0435\u0439\u043c \u0444\u0438\u0440\u043c\u0430",
+    "category": "electronics",
+    "amount": 2,
+    "price": "9700.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 11,
+  "fields": {
+    "name": "\u0427\u0430\u0439\u043d\u0438\u043a \"Xiaomi\"",
+    "description": "\u0414\u043e\u0444\u0438\u0433\u0430 \u0443\u043c\u043d\u044b\u0439 \u0447\u0430\u0439\u043d\u0438\u043a \u0441 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u044c\u044e \u0443\u0434\u0430\u043b\u0435\u043d\u043d\u043e\u0433\u043e \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f",
+    "category": "electronics",
+    "amount": 7,
+    "price": "3200.00"
+  }
+},
+{
   "model": "auth.user",
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$150000$kY3MvB96KX0q$8clPlcynU4KFLhLmWE7YO7JpLQnedLZtJQW+P6bF/A8=",
-    "last_login": "2020-07-30T14:08:10.079Z",
+    "last_login": "2020-08-27T13:40:34.079Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "",
