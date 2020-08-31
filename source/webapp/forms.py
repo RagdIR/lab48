@@ -1,5 +1,5 @@
 from django import forms
-from .models import Product
+from .models import Product, Basket
 
 
 class SimpleSearchForm(forms.Form):
@@ -9,4 +9,10 @@ class SimpleSearchForm(forms.Form):
 class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
+        exclude = []
+
+
+class BasketForm(forms.ModelForm):
+    class Meta:
+        model = Basket
         exclude = []

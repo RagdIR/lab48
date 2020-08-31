@@ -25,14 +25,18 @@
                     {% block menu %}
                         <a class="nav-item nav-link" href="{% url 'index' %}">Главная<span class="sr-only">(current)</span></a>
                         <a class="nav-item nav-link" href="{% url 'product_create' %}">Добавить товар</a>
+                        <a class="nav-item nav-link" href="{% url 'basket_view' %}">Корзина</a>
                     {% endblock %}
                 </div>
-            </div>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
-        </form>
+                </div>
+            {% block search %}
+                    <form action="{% url 'index' %}" method="GET" class="form-inline my-2 my-lg-0">{{ search_form.search }}
+                      <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
+                    </form>
+            {% endblock %}
         </div>
+
     </nav>
 <body>
     <div class="container">

@@ -7,6 +7,7 @@
     <a class="nav-item nav-link" href="{% url 'product_create' %}">Добавить товар</a>
     <a class="nav-item nav-link" href="{% url 'product_update' product.pk %}">Редактировать</a>
     <a class="nav-item nav-link" href="{% url 'product_delete' product.pk %}">Удалить</a>
+    <a class="nav-item nav-link" href="{% url 'basket_view' basket.pk %}">В корзину</a>
 {% endblock %}
 
 {% block content %}

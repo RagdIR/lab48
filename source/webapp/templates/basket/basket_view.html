@@ -1,34 +1,16 @@
-{#{% extends 'base.html' %}#}
-{##}
-{#{% block title %}Корзина товаров{% endblock %}#}
-{##}
-{#<table class="table">#}
-{#  <thead>#}
-{#    <tr>#}
-{#      <th scope="col">#</th>#}
-{#      <th scope="col">Товар</th>#}
-{#      <th scope="col">Количество</th>#}
-{#      <th scope="col">Итого:</th>#}
-{#    </tr>#}
-{#  </thead>#}
-{#  <tbody>#}
-{#    <tr>#}
-{#      <th scope="row">1</th>#}
-{#      <td>Mark</td>#}
-{#      <td>Otto</td>#}
-{#      <td>@mdo</td>#}
-{#    </tr>#}
-{#    <tr>#}
-{#      <th scope="row">2</th>#}
-{#      <td>Jacob</td>#}
-{#      <td>Thornton</td>#}
-{#      <td>@fat</td>#}
-{#    </tr>#}
-{#    <tr>#}
-{#      <th scope="row">3</th>#}
-{#      <td>Larry</td>#}
-{#      <td>the Bird</td>#}
-{#      <td>@twitter</td>#}
-{#    </tr>#}
-{#  </tbody>#}
-{#</table>#}
+{% extends 'base.html' %}
+
+{% block title %}Детали товара{% endblock %}
+
+{% block menu %}
+    <a class="nav-item nav-link" href="{% url 'index' %}">Главная<span class="sr-only">(current)</span></a>
+
+{% endblock %}
+
+{% block content %}
+        {% for products in basket %}
+            <h1>Название: {{ product.name }}</h1>
+            <p>Остаток товара: {{ product.amount }} шт.</p>
+            <p>Цена за единицу товара: {{ product.price }}</p>
+        {% endfor %}
+{% endblock %}
