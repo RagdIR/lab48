@@ -10,6 +10,7 @@ CATEGORY_CHOICES = [
     ('electronics', 'Электротовары')
 ]
 
+
 class Product(models.Model):
     name = models.CharField(max_length=100, verbose_name='Название товара')
     description = models.TextField(max_length=2000, null=True, blank=True, verbose_name='Описание')
@@ -24,3 +25,16 @@ class Product(models.Model):
     class Meta:
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
+
+
+class Basket(models.Model):
+    product = models.ForeignKey('webapp.Product', related_name='product',
+                               on_delete=models.CASCADE, verbose_name='Товары')
+    quantity = models.IntegerField(verbose_name='Количество товара', validators=[MinValueValidator(0)])
+
+    def __str__(self):
+        return f'{self.product} - {self.quantity}'
+
+    class Meta:
+        verbose_name = 'Корзина'
+        verbose_name_plural = 'Корзины'
